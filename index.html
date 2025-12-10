@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>HOME</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Georgia, serif;
+        }
+        .navbar{
+           width: 100%;
+           background: #550000;
+           padding: 15px 40px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+        }
+        .nav-links{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .nav-links a:hoverP{
+            color: lightgrey;
+        }
+        .logo{
+            width: 50px;
+        }
+        .welcome{
+            width: 100%;
+            padding: 60px 40px;
+            background-color: #770000;
+            text-align: center;
+        }
+        .welcome h1{
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .welcome p{
+            color: white;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        .about{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 50px;
+            padding: 86px 30px;
+            background-color: #c17171;
+        }
+        .about-left{
+            flex: 0.4;
+            display: flex;
+            justify-content: center;
+        }
+        .about-logo-img{
+            width: 390px;
+            height: auto;
+        }
+        .about-text{
+            flex: 1
+        }
+        .about-text h2{
+            color: white;
+            font-size: 32px;
+            margin-bottom: 60px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .about-text p{
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .read-more{
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 20px;
+            background-color: #550000;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .read-more:hover{
+            background-color: #770000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="OB Logo" class="logo">
+
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gwa.html">Grades</a></li>
+        <li><a href="clubinfo.html">Clubs</a></li>
+    </ul>
+    </nav>
+
+    <section class="welcome">
+        <h1>Welcome to O.B. Montessori Center Fairview</h1>
+        <p>Seipsum Facit Persona, Man Makes Himself</p>
+    </section>
+
+    <section class="about">
+            <img src="logo.png" alt="O.B. Montessori Logo" class="about-logo-img">
+    
+    <div class="about-text">
+        <h2>About O.B. Montessori</h2>
+    <div class="about-line"></div>
+        <p>O.B. Montessori Center, Inc. is a private educational institution that offers a comprehensive Montessori education program for students from preschool to high school. Founded in 1987, the school is committed to providing a nurturing and stimulating environment that fosters the holistic development of each child.</p>
+        <p>The school's curriculum is based on the Montessori method, which emphasizes hands-on learning, self-directed activity, and collaborative play. O.B. Montessori Center, Inc. aims to cultivate critical thinking, creativity, and a lifelong love of learning in its students.</p>
+
+        <a href="https://obmontessori.edu.ph/" class="read-more">Read More</a>
+    </div>
+    </section>
+</body>
+</html>

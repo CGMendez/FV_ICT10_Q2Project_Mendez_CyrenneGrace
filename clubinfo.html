@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>CLUBS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #c77676;     
+        }
+        .navbar {
+            width: 100%;
+            background: #550000;           
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffb3b3;
+        }
+
+        .logo {
+            width: 50px;
+        }
+        .main-container {
+            width: 70%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            background-color: #8b2f3e; 
+            border-radius: 20px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffe3e3;
+        }
+        .clubs {
+            width: 320px;
+            height: 40px;
+            padding-left: 10px;
+            background-color: #ffdddd;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+        button {
+            width: 320px;
+            height: 40px;
+            background-color: #5d0f1d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        }
+        button:hover {
+            background-color: #7b1326;
+        }
+        #output-box {
+            margin-top: 30px;
+            width: 100%;
+            background-color: #b85063;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: inset 0px 0px 10px rgba(0,0,0,0.2);
+            color: #ffecec;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="OB Logo" class="logo">
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gwa.html">Grades</a></li>
+            <li><a href="clubinfo.html">Clubs</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+
+        <div class="inner-content">
+            <h1>School Club Information</h1>
+
+            <label>Select a Club:</label><br>
+            <select id="Club_Selection" class="clubs">
+                <option value="Marching Band">Marching Band</option>
+                <option value="Dance Club">Dance Club</option>
+                <option value="Math Club">Math Club</option>
+                <option value="Science Club">Science Club</option>
+                <option value="Cocc Club">Cadet Officer Candidate Course</option>
+                <option value="Glee Club">Glee Club</option>
+                <option value="CommArts">Communication Arts Club</option>
+            </select>
+
+            <button type="submit" id="Show_Club" py-click="Show_Club">Show Information</button>
+            <div id="result"></div> 
+            <pre id="output-box"></pre> 
+        </div>
+    </div>
+
+    <script type="py" src="club.py"></script>
+
+</body>
+</html>

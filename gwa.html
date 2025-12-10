@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>GWA</title>
+
+    <style>
+        body{
+            font-family: Georgia, serif;
+            background-color: #c17171;
+            margin: 0;
+            overflow: hidden;
+        }
+        .navbar{
+           width: 100%;
+           background: #550000;
+           padding: 15px 40px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+        }
+        .nav-links{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .logo{
+            width: 50px;
+        }
+        .calculator-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            gap: 40px;
+        }
+        .card{
+            background: #A24857;
+            padding: 30px;
+            width: 450px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            color: white;
+        }
+        .card-title{
+            text-align: center;
+            color: #ffe2e2;
+            margin-bottom: 15px;
+        }
+        label{
+            background: #a24857;
+            color: #ffe2e2;
+            padding: 7px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .row label{
+            width: 40%;
+            margin: 0;
+        }
+        .row input{
+            width: 58%;
+            margin: 0;
+        }
+        .section-label{
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffe2e2;
+        }
+        .calculate-btn{
+            width: 100%;
+            background: #5d0f1d;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .calculate-btn:hover{
+            background: #7b1326;
+        }
+        .result-card {
+            background: #8b2f3e;
+            padding: 30px;
+            width: 450px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.25);
+            color: white;
+            height: auto;
+        }
+        #output, #highlight {
+            background: #d18181;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            min-height: 60px;
+            overflow: hidden;
+            white-space: pre-wrap;
+            box-shadow: inset 0px 0px 8px rgba(0,0,0,0.15);
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="OB Logo" class="logo">
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gwa.html">Grades</a></li>
+            <li><a href="clubinfo.html">Clubs</a></li>
+        </ul>
+    </nav>
+
+    <section class="calculator-section">
+
+        <div class="card">
+            <h2 class="card-title">Grade Calculator</h2>
+
+            <label for="name">First Name:</label>
+            <input type="text" id="firstname" placeholder="Enter">
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" placeholder="Enter">
+
+            <p class="section-label">Enter your Grades:</p>
+
+            <div class="row subject-row">
+                <label>Science:</label>
+                <input type="text" id="science" placeholder="0-100">
+            </div>
+
+            <div class="row subject-row">
+                <label>Math:</label>
+                <input type="text" id="math" placeholder="0-100">
+            </div>
+
+            <div class="row subject-row">
+                <label>English:</label>
+                <input type="text" id="english" placeholder="0-100">
+            </div>
+
+            <div class="row subject-row">
+                <label>Filipino:</label>
+                <input type="text" id="filipino" placeholder="0-100">
+            </div>
+
+            <div class="row subject-row">
+                <label>ICT:</label>
+                <input type="text" id="ict" placeholder="0-100">
+            </div>
+
+            <div class="row subject-row">
+                <label>Social Studies:</label>
+                <input type="text" id="socialstudies" placeholder="0-100">
+            </div>
+
+            <button type="button" class="calculate-btn" py-click="calculate_gwa">Calculate GWA</button>
+        </div>
+
+        <div class="result-card">
+            <h2>Results:</h2>
+            <div id="output"></div>
+            <div id="highlight"></div>
+        </div>
+
+    </section>
+
+    <script type="py" src="gwa.py"></script>
+</body>
+</html>
